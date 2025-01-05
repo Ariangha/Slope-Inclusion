@@ -88,3 +88,13 @@ To summarize the performance metrics of both models, the table below provides a 
 
 **Table 1**: Performance comparison between models trained with and without slope data across AUROC, Precision, and Recall metrics for Train, Validation, and Test datasets. Improvements are expressed in basis points (b.p).
 
+## Conclusions and Future Work
+
+The findings from this study highlight the potential of integrating slope data into GNNs for improving road safety modeling. The enhanced **AUROC** and **Precision** reflect the model’s better ranking of accident-prone areas and reduced false positives, contributing to more accurate predictions. 
+
+However, the trade-off between **Precision** and **Recall** underscores the need for additional refinement of the model. 
+
+### Future Work:
+- Testing the model across diverse geographical areas.
+- Improving the quality of slope data using the **Google Maps API**.
+- Optimizing the model parameters based on the new slope data.
