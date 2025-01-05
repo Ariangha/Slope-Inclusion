@@ -60,3 +60,31 @@ The hyperparameters and GCN architecture were adopted based on the recommendatio
   - **Validation**: 2018 (20,677 records)
   - **Testing**: 2019–2020 (39,222 records)
 - Model demonstrated solid performance across all tested states with optimized predictive accuracy.
+
+## Experimental Results
+
+We anticipated that integrating slope data into the Graph Neural Networks (GNNs) for road safety modeling would lead to notable improvements in performance metrics. This expectation is supported by the findings of Kuşkapan, E., et al. (2024), who observed that slopes exceeding 6% combined with snow significantly impacted traffic accidents, emphasizing the critical role of slope data in understanding accident-prone road conditions.
+
+Specifically:
+- **AUROC** improved from **82.62%** to **83.22%**, marking an increase of **60 basis points**. This enhancement demonstrates the model’s improved ability to rank accident-prone road segments more effectively.
+- **Precision** increased from **5.26%** to **8.13%**, indicating a reduction in false positives and enhancing the reliability of the model’s predictions.
+- However, a slight decline in **Recall** was observed, dropping from **52.01%** to **47.14%**, which suggests that while the model became more precise, it slightly compromised its ability to identify true positives.
+
+This trade-off highlights the need for further optimization through feature engineering and hyperparameter tuning based on this new information.
+
+To summarize the performance metrics of both models, the table below provides a detailed comparison of the **AUROC**, **Precision**, and **Recall** for the Train, Validation, and Test datasets.
+
+| **Metric**       | **Model - Slope**  | **Model - No Slope** | **Improvement (b.p)** |
+|-------------------|--------------------|-----------------------|------------------------|
+| **Train AUROC**   | 83.31 ± 0.35       | 82.99 ± 0.15          | +32                   |
+| **Valid AUROC**   | 83.03 ± 0.12       | 82.73 ± 0.04          | +30                   |
+| **Test AUROC**    | 83.22 ± 0.30       | 82.62 ± 0.21          | +60                   |
+| **Train Precision** | 11.89 ± 4.32     | 8.29 ± 3.92           | +360                  |
+| **Valid Precision** | 8.96 ± 2.93      | 6.46 ± 1.36           | +250                  |
+| **Test Precision**  | 8.13 ± 2.77      | 5.26 ± 1.25           | +287                  |
+| **Train Recall**  | 44.35 ± 5.56       | 55.46 ± 5.54          | -1111                 |
+| **Valid Recall**  | 46.79 ± 6.60       | 55.96 ± 3.90          | -917                  |
+| **Test Recall**   | 47.14 ± 8.47       | 52.01 ± 1.34          | -487                  |
+
+**Table 1**: Performance comparison between models trained with and without slope data across AUROC, Precision, and Recall metrics for Train, Validation, and Test datasets. Improvements are expressed in basis points (b.p).
+
