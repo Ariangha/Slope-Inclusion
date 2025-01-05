@@ -1,7 +1,7 @@
 # Enhancing Road Safety Modeling with Graph Neural Networks: The Impact of Slope Inclusion
 
-Link to the base research: https://arxiv.org/pdf/2311.00164
-Link to the codebase of the research: https://github.com/VirtuosoResearch/ML4RoadSafety
+- Link to the base research: https://arxiv.org/pdf/2311.00164
+- Link to the codebase of the research: https://github.com/VirtuosoResearch/ML4RoadSafety
 
 ## Abstract
 Recent studies have begun leveraging Graph Neural Networks (GNNs) to predict traffic accidents by uncovering spatiotemporal patterns in road networks (Nippani et al., 2017; Gao X. et al., 2024), facilitating improved urban planning and road safety. In this work, we aimed to replicate the findings of Nippani et al. (2017) and evaluate the impact of incorporating slope data into the model. Our experiments demonstrated an improvement of **60 basis points in AUROC** after integrating slope information, highlighting its significance in enhancing predictive performance.
